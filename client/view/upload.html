@@ -1,0 +1,27 @@
+<template name="upload1">
+
+   <div class="container">
+   <div class="row main">
+
+      <div class="main-login main-center">
+
+            <fieldset>
+               <legend><strong>Detail's File</strong></legend>
+               <form class="form-group" id="form4">
+               <ul class="ab" type="i">
+                  <li>&nbsp;&nbsp;Details Personal_Data</li><br>
+
+                  {{> upload_bootstrap  callbacks=myCallbacks fileTypes='.pdf' multiple=true formData=specificFormData }}<br>
+                  <li>&nbsp;&nbsp;Details of Parents</li><br>
+
+                  {{> upload_bootstrap  callbacks=myCallbacks fileTypes='.pdf' multiple=true formData=specificFormData }}<br>
+               </ul>
+               </form>
+            </fieldset>
+            <button type="submit" id="sub_btn" class="btn btn-primary btn-lg btn-block login-button">save & next</button>
+      </div>
+
+   </div>
+   </div>
+
+</template>

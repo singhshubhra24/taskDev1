@@ -1,0 +1,91 @@
+<template name="preview">
+   <div class="form-group ">
+      <form id= "form5" class="preview">
+         <div class="col-sm-12">
+            <h3 style="text-align:center">Personal_Details</h3><hr>
+            <div class="container" style="margin: 25px auto;">
+               <!-- <div class="printer-type table-responsive col-sm-12">
+                  <table width="1000" border="0" class="printer-row table table-bordered"> -->
+               <table id="example" class="table table-striped table-bordered dt-responsive nowrap" cellspacing="0" width="100%">
+                  <thead>
+                     <tr>
+                        <th>Your address</th>
+                        <th>joining_date</th>
+                        <th>Gender</th>
+                        <th>Salary</th>
+                        <th>Extn.</th>
+                        <th>Mobil No.</th>
+                        <th>E-mail</th>
+                        <th><center>ACTION</center></th>
+                     </tr>
+                  </thead>
+                  {{#with counter1}}
+                  <tbody>
+                     <td>{{this.address}}</td>
+                     <td>{{this.date}}</td>
+                     <td>{{this.gender}}</td>
+                     <td>{{this.Salary}}</td>
+                     <td>{{this.Extn}}</td>
+                     <td>{{this.mobile}}</td>
+                     <td>{{this.email}}</td>
+                     <!-- <td><center><button class="editdata" id="edit">EDIT</button>
+                       <button class="deletedata"  id="delete">DELETE</button></center></td> -->
+
+                       <td class=edit1><center>
+                             <a class="btn btn-primary edit" id={{_id}}>
+                             <i class="glyphicon glyphicon-pencil" aria-hidden="true"></i></a>
+                             &nbsp;
+                             <a class="btn btn-primary del" id={{_id}}>
+                             <i class="glyphicon glyphicon-trash" aria-hidden="true"></i></a></center>
+                     </td>
+
+                     <!-- <td><button name="edbtn" type="button" id={{_id}} class="edit_btn">Edit</button></td> -->
+                  </tbody>
+                  {{/with}}
+               </table>
+            </div>
+         </div>
+         <div class="col-sm-12">
+            <h3 style="text-align:center">Parent_Details</h3>
+            <div class="container" style="margin: 25px auto;">
+               <table id="example" class="table table-striped table-bordered dt-responsive nowrap" cellspacing="0" width="100%">
+                  <thead>
+                     <tr>
+                        <th>Father's Name</th>
+                        <th>F_Mobile no.</th>
+                        <th>Mother's Name</th>
+                        <th>M_Mobile no.</th>
+                        <th>Address</th>
+                        <th><center>Action</center></th>
+                     </tr>
+                  </thead>
+                  {{#with counter2}}
+                  <tbody>
+                     <tr>
+                        <td>{{this.F_name}}</td>
+                        <td>{{this.F_mobile}}</td>
+                        <td>{{this.M_name}}</td>
+                        <td>{{this.M_mobile}}</td>
+                        <td>{{this.address}}</td>
+                        <!-- <td><center><a type=button class="summit_btn" id="edit"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> EDIT</a>
+                          <button class="deletedata"  id="delete">DELETE</button></center></td> -->
+                        <td class=edit2><center>
+                              <a class="btn btn-primary edit" id={{_id}}>
+                              <i class="glyphicon glyphicon-pencil" aria-hidden="true"></i></a>
+                              &nbsp;
+                              <a class="btn btn-primary del" id={{_id}}>
+                              <i class="glyphicon glyphicon-trash" aria-hidden="true"></i></a></center>
+                      </td>
+                     </tr>
+                     <!-- <td><button name="edbtn" type="button" id={{_id}} class="edit_btn">Edit</button></td> -->
+                  </tbody>
+                  {{/with}}
+               </table>
+            </div>
+         </div>
+      </form>
+      <div class="form-group pull-right col-sm-8">
+         <button type="submit"  id="sub-btn" style="float:inherit pull-right" class="login-button">generate pdf</button>
+      </div>
+   </div>
+</template>

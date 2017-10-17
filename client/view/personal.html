@@ -1,0 +1,107 @@
+<template name="personal">
+  <div class="container">
+    <div class="row main">
+      <div class="main-login main-center">
+       <fieldset>
+        <legend>Personal Details</legend>
+  {{#with counter3}}
+        <form class="form-group" id="formTes" action="#">
+          <div class="form-group">
+            <label for="name" class="cols-sm-2 control-label">Your address</label>
+            <div class="cols-sm-10">
+              <div class="input-group">
+                <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+                <input type="text" class="form-control xyz" name="address" value={{this.address}} id="address" placeholder="Enter your Address"/>
+              </div>
+              <!-- value={{this.name}} -->
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="Start date" class="cols-sm-2 control-label">Start date</label>
+            <div class="cols-sm-10">
+              <div class="input-group">
+                <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+                <input type="date" class="form-control xyz" name="date" value={{this.date}} id="date" placeholder="Enter your DOB"/>
+              </div>
+              <!-- value={{this.date}} -->
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="Gender" class="cols-sm-2 control-label">Gender</label>
+            <div class="cols-sm-10">
+              <div class="input-group">
+                <span class="input-group-addon"> <i class="glyphicon glyphicon-user"> </i>  </span>
+                <input type="radio" class="xyz" value={{this.gender}} name="gender"> Male
+                <!-- value={{this.gender}} -->
+                <input type="radio" class="xyz"  value={{this.gender}} name="gender"> Female
+                 <!-- value={{this.gender}} -->
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="Salary" class="cols-sm-2 control-label">Salary</label>
+            <div class="cols-sm-10">
+              <div class="input-group">
+                <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                <input type="text" class="form-control xyz" name="Salary"  value={{this.salary}} id="Salary" placeholder="Enter your Salary"/>
+              </div>
+               <!-- value={{this.password}}  -->
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="Extn" class="cols-sm-2 control-label">Extn.</label>
+            <div class="cols-sm-10">
+              <div class="input-group">
+                <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                <input type="text" class="form-control xyz" value="{{this.Extn}}" name="Extn" id="Extn" placeholder="Enter your Extn."/>
+              </div>
+               <!-- value={{this.confirm}} -->
+             </div>
+          </div>
+
+          <div class="form-group">
+            <label for="mobile" class="cols-sm-2 control-label">Mobile no.</label>
+            <div class="cols-sm-10">
+              <div class="input-group">
+                <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
+                <input type="text" class="form-control xyz" name="mobile"  value={{this.mobile}} id="mobile" placeholder="your Mobile No."/>
+              </div>
+               <!-- value={{this.mobile}}  -->
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="E_mail" class="cols-sm-2 control-label">E_mail</label>
+            <div class="cols-sm-10">
+              <div class="input-group">
+                <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
+                <input type="text" class="form-control xyz" name="email"  value={{this.email}} id="email" placeholder="your Mobile No."/>
+              </div>
+               <!-- value={{this.mobile}}  -->
+            </div>
+          </div>
+          {{#if showBtn}}
+          <div class="form-group">
+              <button type="submit" id="updatebtn" class="btn btn-primary btn-lg btn-block login-button">Update</button>
+            </div>
+
+          {{else}}
+          <div class="form-group">
+               <button type="submit" id="sub_btn" class="btn btn-primary btn-lg btn-block login-button">save & next</button>
+           </div>
+          {{/if}}
+          <!-- <div class="form-group ">
+            <button type="submit" value="submit">Submit</button>
+          </div> -->
+
+        </form>
+        {{/with}}
+       </fieldset>
+      </div>
+    </div>
+  </div>
+</template>

@@ -1,0 +1,81 @@
+<template name="parent">
+  <div class="container">
+    <div class="row main">
+      <div class="main-login main-center">
+       <fieldset>
+        <legend>Parent's Details</legend>
+
+        {{#with counter4}}
+        <form  id="formT" action="#">
+          <div class="form-group">
+            <label for="name" class="cols-sm-2 control-label">Father's Name</label>
+            <div class="cols-sm-10">
+              <div class="input-group">
+                <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                <input type="text" class="form-control xyz" name="F_name" value={{this.F_name}} id="name"  placeholder="Enter father name"/>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="mobile" class="cols-sm-2 control-label">F_Mobile no.</label>
+            <div class="cols-sm-10">
+              <div class="input-group">
+                <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
+                <input type="text" class="form-control xyz" name="F_mobile"  value={{this.F_mobile}} id="mobile"  placeholder="father's Mobile No."/>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="email" class="cols-sm-2 control-label">Mother's Name</label>
+            <div class="cols-sm-10">
+              <div class="input-group">
+                <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                <input type="text" class="form-control xyz" name="M_name" value={{this.M_name}} id="name"  placeholder="Enter mother name"/>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="mobile" class="cols-sm-2 control-label">M_Mobile no.</label>
+            <div class="cols-sm-10">
+              <div class="input-group">
+                <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
+                <input type="text" class="form-control xyz" name="M_mobile" value={{this.M_mobile}} id="mobile"  placeholder="mother's Mobile No."/>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="form-group">
+            <label for="password" class="cols-sm-2 control-label">confirm Address</label>
+            <div class="cols-sm-10">
+              <div class="input-group">
+                <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+                <input type="text" class="form-control xyz" name="address" value={{this.address}}  id="address"  placeholder="Enter address"/>
+              </div>
+            </div>
+          </div>
+
+          {{#if showBtn}}
+          <div class="form-group">
+              <button type="submit" id="updatebtn" class="btn btn-primary btn-lg btn-block login-button">Update</button>
+            </div>
+
+          {{else}}
+            <div class="form-group">
+                <button type="submit" id="sub_btn" class="btn btn-primary btn-lg btn-block login-button">save & next</button>
+             </div>
+          {{/if}}
+           <!-- <div class="form-group ">
+              <button type="submit" id="sub_btn" class="btn btn-primary btn-lg btn-block login-button">save & next</button>
+            </div> -->
+
+         </form>
+         {{/with}}
+         </fieldset>
+      </div>
+    </div>
+  </div>
+</template>
